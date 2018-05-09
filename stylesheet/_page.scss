@@ -1,0 +1,32 @@
+#wrapper{
+    width: 100%;
+    border: 3px solid;
+}
+
+#sports{
+    width: 100px;
+    height: 60px;
+    border: 2px solid;
+    background-color: blue;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+//
+//
+//
+// var sports = document.createElement("div")
+//             sports.style.width = "100px";
+//             sports.style.height = "80px";
+//             sports.style.backgroundColor = "blue";
+//             sports.style.border = "2px solid"
+//             sports.innerHTML = "Sports";
+//             sports.style.fontSize = "25px";
+//             sports.style.textTransform = "uppercase";
+//             sports.style.textAlign = "center"
+//             sports.style.postion = "relative";
+//             sports.style.position =
+//             document.body.appendChild(wrapper)
