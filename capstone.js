@@ -1,5 +1,16 @@
+// array for the sports column
+var list = ["jersey", "football", "gatorade", "coaches"];
+var part = ["What is the uniform called that players wear in a game?",
+            "What does the QB throw or hand off to another player?",
+            "What is the name of the drink that's used mostly in sports?",
+            "Who are responsible for teaching players how to play the game?"];
 
-//wrapper for the entire page
+var random = Math.floor(Math.random() * list.length);
+var tempItem = list[random]
+var dashes = tempItem.replace(/[a-z]/gi, "   __   ")
+
+
+//wrapper for the entire page in the black border
 var wrapper = document.createElement("div")
               wrapper.style.width = "100%"
               wrapper.style.height = "850px"
@@ -7,8 +18,7 @@ var wrapper = document.createElement("div")
               document.body.appendChild(wrapper)
 
 
-//category box
-
+//category box as  blue button at the top of the screen
 var subject = document.createElement("div")
               subject.style.width = "160px";
               subject.style.height = "50px";
@@ -23,16 +33,16 @@ var subject = document.createElement("div")
               subject.style.textAlign = "center";
               wrapper.appendChild(subject);
 
-// Options on which category to choose from
+// The 4 options button below the category
 var categories = ["sports", "comics", "riddles", "history"];
 
 for(let i=0; i<4; i++){
-    var topics = document.createElement("div")
-                topics.style.width = "80px";
-                topics.style.height = "30px";
+    var topics = document.createElement("button")
+                topics.style.width = "100px";
+                topics.style.height = "45px";
                 topics.style.position = "relative";
                 topics.style.top = "30px";
-                topics.style.left = "190px";
+                topics.style.left = "210px";
                 topics.style.marginLeft = "15px"
                 topics.style.padding = "10px";
                 topics.style.backgroundColor = "blue";
@@ -46,10 +56,11 @@ for(let i=0; i<4; i++){
                 // sports.style.postion = "relative";
                 // sports.style.pos =
                 wrapper.appendChild(topics)
+
 }
 
 
-//wrapper box for Alphabet letters and the guessing letters
+//The green border for Alphabet letters and the guessing letters
 
 var box = document.createElement("div")
           box.style.width = "70%";
@@ -60,7 +71,8 @@ var box = document.createElement("div")
           box.style.left = "120px";
           wrapper.appendChild(box)
 
-// wrapper box for the Alphabet buttons
+
+//  The orange box for the Alphabet buttons
 
 var wrap = document.createElement("div")
             wrap.style.width = "60%"
@@ -73,7 +85,7 @@ var wrap = document.createElement("div")
 
 
 
-//Alphabet buttons
+//The individual Alphabet buttons
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 for(let i=0; i<26; i++){
@@ -81,7 +93,7 @@ for(let i=0; i<26; i++){
                 letters.style.width = "70px";
                 letters.style.height = "35px";
                 letters.style.position = "relative";
-                letters.style.bottom = "40px";
+                letters.style.bottom = "30px";
                 letters.style.left = "0px";
                 letters.style.marginLeft = "18px"
                 letters.style.marginTop = "5px"
@@ -101,83 +113,84 @@ for(let i=0; i<26; i++){
                 wrap.appendChild(letters);
                 var selector = document.getElementsByClassName("a")
                     selector[i].addEventListener("click", function(event){
-                      answer.innerHTML = event.target.innerHTML
+                      type.innerHTML = event.target.innerHTML
                     })
 
 }
 
-// box where the letter will be selected to make words
+// The red box where the letter will be keyed in from selecting a letter from the alphabets
+var type = document.createElement("div")
+            type.style.width = "50%";
+            type.style.height = "40px";
+            type.style.border = "1px solid red";
+            type.style.position = "relative";
+            type.style.top = "20px";
+            type.style.left = "150px";
+            box.appendChild(type)
+
+
+
+// Purple box where the number of dashes will be present
 var answer = document.createElement("div")
             answer.style.width = "70%";
-            answer.style.height = "80px";
-            answer.style.border = "1px solid";
+            answer.style.height = "50px";
+            answer.style.border = "4px solid purple";
             answer.style.position = "relative";
-            answer.style.top = "30px";
+            answer.innerHTML = dashes;
+            answer.style.textAlign = "center"
+            answer.style.top = "40px";
             answer.style.left = "80px";
             box.appendChild(answer)
 
 
+// array to get the list of letters to corrospond the correct letter
 
-// box that will prompt questions
+var correct = [];
+var wrong = [];
+
+function guessing(letter){
+    for(i=0; i<dashes.length[i]; i++){
+      if(letter === dashes[i]){
+        console.log(correct.push[dashes[i]])
+      }{
+        // wrong.push[dashes[i]]
+      }
+    }
+}
+        // console.log(t)
+
+function flip(){
+    for(i=0; i<dashes.length[i]; i++){
+      str = dashes.replace("__", "alphabet[i]")
+  }
+}
+// Blue box that will prompt hint
 var questionaire = document.createElement("div")
                   questionaire.style.width = "80%";
-                  questionaire.style.height = "100px";
-                  questionaire.style.border = "1px solid blue";
+                  questionaire.style.height = "80px";
+                  questionaire.style.border = "5px solid blue";
+                  questionaire.innerHTML = part[random]
                   questionaire.style.position = "relative";
+                  questionaire.style.textAlign = "center"
+                  questionaire.style.fontSize = "20px"
                   questionaire.style.top = "55px";
                   questionaire.style.left = "50px";
                   box.appendChild(questionaire)
 
 
-// questionaires for the sports section
-// var part = ["What is the uniform called that players wear in a game?",
-//                       "What does the QB throw or hand off to another player?",
-//                       "What is the name of the drink that's used mostely in sports?",
-//                       "Who are responsible for teaching players how to play the game?"];
+var sports = document.getElementsByClassName("sports")[0]
+      sports.addEventListener("click", function(){
+
+      });
+// var comics = document.getElementsByClassName("comics")
+//       comics.addEventListener("click", function(){
 //
+//       });
+// var riddles = document.getElementsByClassName("riddles")
+//       riddles.addEventListener("click", function(){
 //
-// function sportsPart(){
-//   var askQuestion = part[Math.floor(Math.random()*part.length)];
-//   questionaire.innerHTML = askQuestion;
-// }
-
-// words for the sports section
-var list = ["jersey", "football", "gatorade", "coaches"];
-
-var part = ["What is the uniform called that players wear in a game?",
-            "What does the QB throw or hand off to another player?",
-            "What is the name of the drink that's used mostely in sports?",
-            "Who are responsible for teaching players how to play the game?"];
-
-            obj = {
-              jersey: "What is the uniform called that players wear in a game?",
-              football: "What does the QB throw or hand off to another player?",
-              gatorade: "What is the name of the drink that's used mostely in sports?",
-              coaches: "Who are responsible for teaching players how to play the game?"
-
-            }
-
-function sportsColumn(){
-
-
-
-  //   for(let i=0; i<4; i++){
-  //       for(let j=0; i<4; j++){
-  //         if(list[i])
-  //       }
-  //   }
-  // }
-
-        var randomWords = list[Math.floor(Math.random()*list.length)];
-        answer.innerHTML = randomWords;
-
-          if(randomWords = ){
-            var two = answer.push(part[i])
-            console.log(two)
-          }
-
-    //     var askQuestion = part[Math.floor(Math.random()*part.length)];
-    //     questionaire.innerHTML = askQuestion;
-    // }
-
-// sportsColumn()
+//       });
+// var history = document.getElementsByClassName("history")
+//       history.addEventListener("click", function(){
+//
+//       });
