@@ -253,7 +253,7 @@ alert("Click the next button to start the game")
 function winOrLose(){
         if(dashesArray.join('') === splitSportsWord.join('')){
             setTimeout(function(){
-              alert("Congrats,...You Won")
+              alert("Congrats,...You Won. Push the next button to continue with the game.")
             }, 1000)
         }
 }
