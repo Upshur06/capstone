@@ -8,6 +8,7 @@ var sportsListArray = [];
 var hintListArray = [];
 var randomizer = 0;
 var splitSportsWord;
+var wrongGuessCount = 0;
 var wear = new word("jersey", "What is the uniform called that players wear in a game?");
 var ball = new word("football", "What does the QB throw or hand off to another player?");
 var drink = new word("gatorade", "What is the name of the drink that's used mostly in sports?");
@@ -60,7 +61,6 @@ function stringDash(arg){
 
 // stringDash(splitSportsWord)
 
-
 //wrapper for the entire page in the black border
 var wrapper = document.createElement("div")
               wrapper.style.width = "100%"
@@ -69,7 +69,6 @@ var wrapper = document.createElement("div")
               wrapper.style.postion= "relative"
               wrapper.style.top = "10px"
               document.body.appendChild(wrapper)
-
 
 //category box as  blue button at the top of the screen
 var subject = document.createElement("div")
@@ -88,7 +87,6 @@ var subject = document.createElement("div")
 
 // The 4 options button below the category
 var categories = ["sports", "comics", "riddles", "history"];
-
 
 for(let i=0; i<4; i++){
     var topics = document.createElement("button")
@@ -125,12 +123,10 @@ var box = document.createElement("div")
 var wrap = document.createElement("div")
             wrap.style.width = "400px"
             wrap.style.height = "325px"
-            // wrap.style.border = "2px solid orange"
             wrap.style.position = "relative";
             wrap.style.top = "50px";
             wrap.style.left = "110px";
             box.appendChild(wrap)
-
 
 //The individual Alphabet buttons
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
@@ -155,18 +151,29 @@ for(let i=0; i<26; i++){
                 wrap.appendChild(letters);
                 var selector = document.getElementsByClassName("a")
                     selector[i].addEventListener('click', function(event){
-                      for(let i = 0;i<splitSportsWord.length;i++){
-                        if(event.target.innerHTML === splitSportsWord[i]){
-                          rightGuessFunction(event.target.innerHTML)
+                      let matched = false;{
+                        for(let i = 0;i<splitSportsWord.length;i++){
+                          if(event.target.innerHTML === splitSportsWord[i]){
+                            rightGuessFunction(event.target.innerHTML)
+                            matched = true;
+                      }
                         }
                       }
-                      wrongGuessFunction(event.target.innerHTML)
+                      if (!matched) {
+                        wrongGuessFunction(event.target.innerHTML)
+                      }
                       winOrLose()
                     })
 }
 
 function wrongGuessFunction(x){
   wrongGuess.innerHTML += x
+  alert("Incorrect")
+  wrongGuessCount += 1;
+  // console.log('Wrong guesses:', wrongGuessCount);
+  if (wrongGuessCount >= 5) {
+    Lose();
+  }
 }
 
 
@@ -180,6 +187,7 @@ function rightGuessFunction(letter){
 }
 
 
+
 // The red box where the wrong guess letter will be stored
 var wrongGuess = document.createElement("div")
             wrongGuess.style.width = "430px";
@@ -188,7 +196,7 @@ var wrongGuess = document.createElement("div")
             wrongGuess.style.position = "relative";
             wrongGuess.style.textAlign = "center"
             wrongGuess.style.fontSize = "25px"
-            wrongGuess.style.top = "60px";
+            wrongGuess.style.top = "30px";
             wrongGuess.style.left = "83px";
             wrongGuess.style.input = "onfocus"
             box.appendChild(wrongGuess)
@@ -202,7 +210,7 @@ var answer = document.createElement("div")
             answer.style.position = "relative";
             answer.style.textAlign = "center"
             answer.style.fontSize = "35px"
-            answer.style.top = "70px";
+            answer.style.top = "50px";
             answer.style.left = "60px";
             box.appendChild(answer)
 
@@ -215,7 +223,7 @@ var questionaire = document.createElement("div")
                   questionaire.style.position = "relative";
                   questionaire.style.textAlign = "center"
                   questionaire.style.fontSize = "20px"
-                  questionaire.style.top = "85px";
+                  questionaire.style.top = "65px";
                   questionaire.style.left = "55px";
                   box.appendChild(questionaire)
 
@@ -226,7 +234,7 @@ function nextButton(){
                 arrow.style.height = "40px"
                 arrow.style.border = "4px solid"
                 arrow.style.position = "relative"
-                arrow.style.bottom = "30px"
+                arrow.style.bottom = "80px"
                 arrow.style.left = "595px"
                 arrow.innerHTML = "next"
                 arrow.style.fontSize = "12px"
@@ -235,6 +243,7 @@ function nextButton(){
                 box.appendChild(arrow)
 
                 arrow.addEventListener("click", hinting)
+
 }
 nextButton()
 
@@ -244,16 +253,25 @@ function hinting(){
           answer.innerHTML= stringDash(splitSportsWord);
           questionaire.innerHTML = hintListArray[randomizer];
           wrongGuess.innerHTML =  wrongGuess.value = " "
+          // reset wrong guess counter
+          wrongGuessCount = 0;
 }
 
 
 
-alert("Click the next button to start the game")
-
+// alert("Click the next button to start the game")
 function winOrLose(){
         if(dashesArray.join('') === splitSportsWord.join('')){
             setTimeout(function(){
               alert("Congrats,...You Won. Push the next button to continue with the game.")
             }, 1000)
         }
+
+}
+
+function Lose(){
+  alert('Game over!');
+  // fill in answer
+  answer.innerHTML = splitSportsWord.join('');
+
 }
