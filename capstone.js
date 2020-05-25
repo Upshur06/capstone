@@ -1,3 +1,5 @@
+let buttonContainer = document.getElementById('button-container');
+
 // array for the sports column
 // function word(sportsList, hintList){
 //   var sportsList = sportsListArray.push(sportsList)
@@ -60,6 +62,29 @@
 // }
 
 // stringDash(splitSportsWord)
+
+
+
+//The individual Alphabet buttons
+var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+for(let i=0; i<26; i++){
+    var letters = document.createElement("div")
+                letters.classList.add("letterStyle")
+                letters.classList.add("a")
+                letters.innerHTML = alphabet[i];
+                buttonContainer.appendChild(letters);
+                // var selector = document.getElementsByClassName("a")
+                //     selector[i].addEventListener('click', function(event){
+                //       for(let i = 0;i<splitSportsWord.length;i++){
+                //         if(event.target.innerHTML === splitSportsWord[i]){
+                //           rightGuessFunction(event.target.innerHTML)
+                //         }
+                //       }
+                //       wrongGuessFunction(event.target.innerHTML)
+                //       winOrLose()
+                //     })
+}
 
 
 
@@ -154,7 +179,6 @@
           // reset wrong guess counter
 //           wrongGuessCount = 0;
 // }
-
 
 
 // alert("Click the next button to start the game")
