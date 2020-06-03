@@ -86,9 +86,6 @@ for(let i=0; i<26; i++){
                 //     })
 }
 
-
-
-
 // function wrongGuessFunction(x){
 //   wrongGuess.innerHTML += x
 //   alert("Incorrect")
@@ -111,60 +108,10 @@ for(let i=0; i<26; i++){
 
 
 
-// The red box where the wrong guess letter will be stored
-// var wrongGuess = document.createElement("div")
-//             wrongGuess.style.width = "430px";
-//             wrongGuess.style.height = "40px";
-//             wrongGuess.style.border = "1px solid red";
-//             wrongGuess.style.position = "relative";
-//             wrongGuess.style.textAlign = "center"
-//             wrongGuess.style.fontSize = "25px"
-//             wrongGuess.style.top = "30px";
-//             wrongGuess.style.left = "83px";
-//             wrongGuess.style.input = "onfocus"
-//             box.appendChild(wrongGuess)
-
-
-// // Purple box where the number of dashes will be present
-// var answer = document.createElement("div")
-//             answer.style.width = "480px";
-//             answer.style.height = "50px";
-//             answer.style.border = "4px solid purple";
-//             answer.style.position = "relative";
-//             answer.style.textAlign = "center"
-//             answer.style.fontSize = "35px"
-//             answer.style.top = "50px";
-//             answer.style.left = "60px";
-//             box.appendChild(answer)
-
-
-// Blue box that will prompt hint
-// var questionaire = document.createElement("div")
-//                   questionaire.style.width = "500px";
-//                   questionaire.style.height = "100px";
-//                   questionaire.style.border = "5px solid #0066cc";
-//                   questionaire.style.position = "relative";
-//                   questionaire.style.textAlign = "center"
-//                   questionaire.style.fontSize = "20px"
-//                   questionaire.style.top = "65px";
-//                   questionaire.style.left = "55px";
-//                   box.appendChild(questionaire)
 
 //next button
 // function nextButton(){
 //     var arrow = document.createElement("button")
-//                 arrow.style.width = "50px"
-//                 arrow.style.height = "40px"
-//                 arrow.style.border = "4px solid"
-//                 arrow.style.position = "relative"
-//                 arrow.style.bottom = "80px"
-//                 arrow.style.left = "595px"
-//                 arrow.innerHTML = "next"
-//                 arrow.style.fontSize = "12px"
-//                 arrow.style.textTransform = "uppercase"
-//                 arrow.style.textAlign = "center";
-//                 box.appendChild(arrow)
-//
 //                 arrow.addEventListener("click", hinting)
 //
 // }

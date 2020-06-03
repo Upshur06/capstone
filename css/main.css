@@ -24,7 +24,9 @@
   background-color: #0066cc;
 }
 
-.grid-category-container > div{
+.grid-category-container div{
+  justify-content: center;
+  margin-left: 35px;
   background-color: #0066cc;
   border: 2px solid;
   text-align: center;
@@ -36,9 +38,7 @@
 .grid-category-container {
   border: 2px solid blue;
   width: 580px;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 30px;
+  display: flex;
 }
 
 #button-container{
@@ -62,6 +62,7 @@
   margin-top: 5px;
 }
 
+
 #design{
   border: 3px solid;
   width: 300px;
@@ -72,6 +73,10 @@
   background-color: red;
 }
 
+#putTogether{
+  display: flex;
+  align-items: center;
+}
 
 #shape1 {
   width: 100px;
@@ -104,5 +109,40 @@
   border-radius: 45%;
   background-color: #0066cc;
 }
+
+
+#wrongGuessLetter{
+  width: 430px;
+  height: 40px;
+  border: 1px solid red;
+  text-align: center;
+  font-size: 25px;
+// wrongGuess.style.input = "onfocus"
+}
+
+#dashesLetter{
+  height: 50px;
+  border: 4px solid purple;
+  text-align: center;
+  font-size: 35px;
+}
+
+#questionaire{
+  width: 500px;
+  height: 100px;
+  border: 5px solid #0066cc;
+  text-align: center;
+  font-size: 20px
+}
+
+#arrow{
+  width: 50px;
+  height: 40px;
+  border: 4px solid;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 
 /*# sourceMappingURL=main.css.map */
