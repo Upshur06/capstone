@@ -79,39 +79,32 @@
 #putTogether{
   display: flex;
   align-items: center;
+  margin-left: 28.7%;
 }
 
-#shape1 {
+#shape1, #shape2, #shape3, #shape4 {
   width: 100px;
   height: 100px;
   border: 2px solid;
   border-radius: 45%;
+}
+
+#shape1 {
   background-color: #0066cc;
 }
 
 #shape2 {
-  width: 100px;
-  height: 100px;
-  border: 2px solid;
-  border-radius: 45%;
   background-color: green;
 }
 
 #shape3 {
-  width: 100px;
-  height: 100px;
-  border: 2px solid;
-  border-radius: 45%;
   background-color: green;
 }
 
 #shape4 {
-  width: 100px;
-  height: 100px;
-  border: 2px solid;
-  border-radius: 45%;
   background-color: #0066cc;
 }
+
 
 #wrongGuessLetter{
   width: 430px;

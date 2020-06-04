@@ -1,8 +1,8 @@
 let buttonContainer = document.getElementById('button-container');
 
-// array for the sports column
-// function word(sportsList, hintList){
-//   var sportsList = sportsListArray.push(sportsList)
+// array for the catagory column
+// function word(catagoryList, hintList){
+//   var catagoryList = sportsListArray.push(sportsList)
 //   var hintList = hintListArray.push(hintList)
 // }
 
@@ -11,6 +11,7 @@ let buttonContainer = document.getElementById('button-container');
 // var randomizer = 0;
 // var splitSportsWord;
 // var wrongGuessCount = 0;
+
 // var wear = new word("jersey", "What is the uniform called that players wear in a game?");
 // var ball = new word("football", "What does the QB throw or hand off to another player?");
 // var drink = new word("gatorade", "What is the name of the drink that's used mostly in sports?");
