@@ -66,15 +66,7 @@ let buttonContainer = document.getElementById('button-container');
 
 
 
-//The individual Alphabet buttons
-var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
-for(let i=0; i<26; i++){
-    var letters = document.createElement("div")
-                letters.classList.add("letterStyle")
-                letters.classList.add("a")
-                letters.innerHTML = alphabet[i];
-                buttonContainer.appendChild(letters);
+{
                 // var selector = document.getElementsByClassName("a")
                 //     selector[i].addEventListener('click', function(event){
                 //       for(let i = 0;i<splitSportsWord.length;i++){
