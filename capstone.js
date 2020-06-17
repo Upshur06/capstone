@@ -65,7 +65,6 @@ let buttonContainer = document.getElementById('button-container');
 // stringDash(splitSportsWord)
 
 
-
 {
                 // var selector = document.getElementsByClassName("a")
                 //     selector[i].addEventListener('click', function(event){
@@ -98,8 +97,6 @@ let buttonContainer = document.getElementById('button-container');
 //     }
 //     answer.innerHTML = dashesArray.join('')
 // }
-
-
 
 
 //next button
