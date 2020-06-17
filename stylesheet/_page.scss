@@ -24,7 +24,7 @@
 .grid-category-container {
   margin: auto;
   border: 2px solid blue;
-  width: 50%;
+  width: 50vw;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -36,10 +36,9 @@
   margin: auto;
   padding: 0;
   text-align: center;
-  font-size: 30px;
+  font-size: 3vw;
   cursor: pointer;
 }
-
 
 #design{
   border: 3px solid;
@@ -58,7 +57,6 @@
   border: 3px solid;
   height: 600px;
   display: flex;
-  justify-content: center;
 }
 
 .flex-group-rows{
@@ -69,14 +67,14 @@
 
 #button-container{
   margin: auto;
-  width: 60%;
+  width: 42vw;
   border: 3px solid green;
 }
 
 .flexbox-letter{
-    width: 50px;
+    width: 60px;
     height: 50px;
-    margin: 10px;
+    margin: 1.1vw;
     border: 3px solid #333;
     background-color: #dfdfdf;
     display: flex;
@@ -84,29 +82,46 @@
     align-items: center;
 }
 
+#boxShapeA{
+    border: 2px solid orange;
+    width: 26vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
-/* #shape1, #shape2, #shape3, #shape4 {
-  width: 100px;
-  height: 100px;
+#boxShapeB{
+    border: 2px solid violet;
+    width: 26vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#shape1, #shape2, #shape3, #shape4 {
+  width: 125px;
+  height: 125px;
   border: 2px solid;
   border-radius: 45%;
-} */
+}
 
-/* #shape1 {
+#shape1 {
   background-color: #0066cc;
-} */
+  align-self: flex-end;
+}
 
-/* #shape2 {
+#shape2 {
   background-color: green;
-} */
+  align-self: flex-end;
+}
 
-/* #shape3 {
+#shape3 {
   background-color: green;
-} */
+}
 
-/* #shape4 {
+#shape4 {
   background-color: #0066cc;
-} */
+}
 
 
 #wrongGuessLetter{

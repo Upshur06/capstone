@@ -1,4 +1,9 @@
 let buttonContainer = document.getElementById('button-container');
+let flexboxLetters = document.getElementsByClassName("flexbox-letter");
+let wrongGuessLetter = document.getElementById("wrongGuessLetter");
+let dashesLetter = document.getElementById("dashesLetter");
+let questionaire = document.getElementById("questionaire");
+let nextArrow = document.getElementById("arrow");
 
 // array for the catagory column
 // function word(catagoryList, hintList){
@@ -64,8 +69,13 @@ let buttonContainer = document.getElementById('button-container');
 
 // stringDash(splitSportsWord)
 
+function testDrive(){
 
-{
+    for(let i=0; i<flexboxLetters.length; i++){
+        flexboxLetters[i].addEventListener("click", function(event){
+            console.log(flexboxLetters[i].innerHTML)
+        })
+
                 // var selector = document.getElementsByClassName("a")
                 //     selector[i].addEventListener('click', function(event){
                 //       for(let i = 0;i<splitSportsWord.length;i++){
@@ -76,6 +86,7 @@ let buttonContainer = document.getElementById('button-container');
                 //       wrongGuessFunction(event.target.innerHTML)
                 //       winOrLose()
                 //     })
+    }
 }
 
 // function wrongGuessFunction(x){
@@ -134,3 +145,5 @@ let buttonContainer = document.getElementById('button-container');
 //   answer.innerHTML = splitSportsWord.join('');
 //
 // }
+
+testDrive();
