@@ -40,9 +40,12 @@ let job = new word("coaches", "Who are responsible for teaching players how to p
 
 
 // hintList chance()
-// let randomSportsWord = function chance(){
-//     return (Math.floor(Math.random() * sportsListArray.length));
-// }
+let randomSportsWord = function(){
+    randomizer = (Math.floor(Math.random() * sportsListArray.length));
+    console.log(sportsListArray[randomizer]);
+    console.log(hintListArray[randomizer]);
+}
+
 
 
 // create a split function
@@ -106,25 +109,27 @@ function testDrive(){
 //         dashesArray.splice(i,1, letter)
 //       }
 //     }
-//     answer.innerHTML = dashesArray.join('')
+//     dashesLetter.innerHTML = dashesArray.join('')
 // }
 
 
-//next button
+// next button
 // function nextButton(){
-//     let arrow = document.createElement("button")
-//                 arrow.addEventListener("click", hinting)
+//         nextArrow.addEventListener("click", hinting){
+//
+//         }
 //
 // }
-// nextButton()
+
+// nextButton();
 
 // function hinting(){
 //           randomizer = (Math.floor(Math.random() * sportsListArray.length));
 //           splitSportsWord = sportsListArray[randomizer].split("")
-//           answer.innerHTML= stringDash(splitSportsWord);
+//           dashesLetter.innerHTML= stringDash(splitSportsWord);
 //           questionaire.innerHTML = hintListArray[randomizer];
-//           wrongGuess.innerHTML =  wrongGuess.value = " "
-          // reset wrong guess counter
+//           wrongGuessLetter.innerHTML =  wrongGuess.value = " "
+//           // reset wrong guess counter
 //           wrongGuessCount = 0;
 // }
 
@@ -142,7 +147,7 @@ function testDrive(){
 // function Lose(){
 //   alert('Game over!');
   // fill in answer
-//   answer.innerHTML = splitSportsWord.join('');
+//   dashesLetter.innerHTML = splitSportsWord.join('');
 //
 // }
 
