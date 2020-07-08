@@ -43,63 +43,23 @@ let job = new word("coaches", "Who are responsible for teaching players how to p
 let randomSportsWord = function(){
     randomizer = (Math.floor(Math.random() * sportsListArray.length));
     console.log(sportsListArray[randomizer]);
-    // console.log(hintListArray[randomizer]);
-    // create a split function
-     // splitSportsWord = sportsListArray[randomizer].split("");
+
+    let sportsDash = sportsListArray[randomizer].split("");
+    console.log(sportsDash)
+
+      for(let i=0; i<=sportsDash.length-1; i++){
+        console.log(sportsDash[i].replace(sportsDash[i], " __ "))
+        dashesLetter.innerHTML += sportsDash[i].replace(sportsDash[i], " __ ")
+      }
+      console.log(hintListArray[randomizer]);
+    questionaire.innerHTML = hintListArray[randomizer];
+
 }
 
-// console.log(splitSportsWord)
-// let sportsArray = [];
-
-// function collection(dashesArray){
-//   let checkArray = sportsArray.push(checkArray)
-//
-// }
 
 // collection(dashesArray)
 
 let dashesArray = [];
-
-// create a string dash function
-// function stringDash(){
-//   dashesArray = [];
-//     for(i=0;i<sportsListArray.length;i++){
-//       console.log(sportsListArray[i]);
-//       dashesArray.push(" __ ");
-//     }
-//     let dashes = dashesArray.join('')
-//     return dashes
-// }
-
-
-
-function stringDash(){
-  randomizer = (Math.floor(Math.random() * sportsListArray.length));
-  let sportsDash = sportsListArray[randomizer].split("");
-  console.log(sportsDash)
-
-    for(let i=0; i<=sportsDash.length-1; i++){
-      // console.log(sportsDash[i].replace(sportsDash[i], " __ "))
-      dashesLetter.innerHTML += sportsDash[i].replace(sportsDash[i], " __ ")
-    }
-
-  dashesArray = [];
-    // for(i=0;i<sportsListArray.length;i++){
-        // console.log(sportsListArray[i]);
-      // let arr = sportsListArray[i].split("");
-        // console.log(arr);
-
-      // for(let j=0;j<arr.length;j++){
-        // console.log(arr[j]);
-        // arr[j].replace(arr[j], " __ ")
-        // dashesArray.push(arr[j]);
-      // }
-
-    // }
-    // let dashes = dashesArray.join('')
-    // return dashes
-    // console.log(dashesArray);
-}
 
 
 // stringDash(splitSportsWord)
@@ -143,14 +103,14 @@ function testDrive(){
 
 
 // next button
-// function nextButton(){
-//         nextArrow.addEventListener("click", hinting){
-//
-//         }
-//
-// }
+function nextButton(){
+        nextArrow.addEventListener("click", function(){
+          randomSportsWord();
+        })
 
-// nextButton();
+}
+
+nextButton();
 
 // function hinting(){
 //           randomizer = (Math.floor(Math.random() * sportsListArray.length));
